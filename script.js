@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     videoContainer.style.display = 'block';
     
     // Video source
-    const videoSrc = "https://myctxa.temycssme.wiki/720p.m3u8";
+    const videoSrc = "https://m3u8.cloudycx.net/media/hls/files/720p.m3u8";
     
     // Initialize player immediately
     function initializePlayer() {
