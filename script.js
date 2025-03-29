@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     videoContainer.style.display = 'block';
     
     // Video source
-    const videoSrc = "https://m3u8.cloudycx.net/media/hls/files/index.m3u8";
+    const videoSrc = "https://002.fclplayer.online/live/csstream2/playlist.m3u8?id=1002";
     
     // Initialize player immediately
     function initializePlayer() {
