@@ -2,11 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Video elements
     const video = document.getElementById('video');
     const videoContainer = document.getElementById('video-container');
-    const countdownContainer = document.getElementById('countdown-container');
-    
-    // Hide countdown and show video immediately
-    countdownContainer.style.display = 'none';
-    videoContainer.style.display = 'block';
     
     // Video source
     const videoSrc = "https://002.fclplayer.online/live/csstream2/playlist.m3u8?id=1002";
@@ -20,7 +15,6 @@ document.addEventListener('DOMContentLoaded', function() {
             hls.on(Hls.Events.MANIFEST_PARSED, function() {
                 video.play().catch(e => {
                     console.error("Autoplay failed:", e);
-                    // Show play button if autoplay fails
                     video.controls = true;
                 });
             });
@@ -39,10 +33,27 @@ document.addEventListener('DOMContentLoaded', function() {
             showError("Your browser doesn't support this stream format.");
         }
     }
-    
+
+    // Disable seeking
+    function disableSeek() {
+        video.addEventListener('timeupdate', function() {
+            if (video.currentTime > video.lastTime) {
+                video.currentTime = video.lastTime;
+            }
+            video.lastTime = video.currentTime;
+        });
+
+        video.addEventListener('seeking', function() {
+            video.currentTime = video.lastTime; // Prevent seeking
+        });
+    }
+
     // Start playback immediately
     initializePlayer();
     
+    // Apply seek disable function
+    video.addEventListener('loadedmetadata', disableSeek);
+
     // Error display function
     function showError(message) {
         const errorDiv = document.createElement('div');
