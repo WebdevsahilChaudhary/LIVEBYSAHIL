@@ -9,7 +9,7 @@ countdownContainer.style.display = 'none';
 videoContainer.style.display = 'block';  
   
 // Video source  
-const videoSrc = "https://002.fclplayer.online/live/csstream2/playlist.m3u8?id=1002";  
+const videoSrc = "https://s1.yuvraj.fun/sky-sp-cric/index.m3u8";  
   
 // Initialize player immediately  
 function initializePlayer() {  
