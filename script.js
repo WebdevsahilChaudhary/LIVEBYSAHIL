@@ -9,7 +9,7 @@ countdownContainer.style.display = 'none';
 videoContainer.style.display = 'block';  
   
 // Video source  
-const videoSrc = "https://s1.yuvraj.fun/sky-sp-cric/index.m3u8";  
+const videoSrc = "https://ee4ee8c03a26.eu-central-1.playback.live-video.net/api/video/v1/eu-central-1.755921704393.channel.LOohfipmCQDP.m3u8";  
   
 // Initialize player immediately  
 function initializePlayer() {  
