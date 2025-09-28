@@ -9,7 +9,7 @@ countdownContainer.style.display = 'none';
 videoContainer.style.display = 'block';  
   
 // Video source  
-const videoSrc = "https://ee4ee8c03a26.eu-central-1.playback.live-video.net/api/video/v1/eu-central-1.755921704393.channel.LOohfipmCQDP.m3u8";  
+const videoSrc = "https://livecfdai-par-mp.slivcdn.com/out/v1/cfed49dc0449444bac761f9dd9155916/std_mdl-700300010_4.m3u8?hdntl=exp=1759108343~acl=*~hmac=80db74d673d5a5f092f5054106086be01eb3290fdecd260f267d29c75ea717a1&originpath=/linear/hls/pb/event/AiCi-L2OSQycd8KtHm0nIA/stream/65e15369-87f0-45bf-9c57-ce71d72700c9:SIN2/variant/5f3000588990fd69e822ee104cea52a4/bandwidth/1663838.m3u8";  
   
 // Initialize player immediately  
 function initializePlayer() {  
